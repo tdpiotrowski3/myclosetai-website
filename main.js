@@ -1,4 +1,4 @@
-// MyCloset: Ai — Shared JS
+// WhichOutfit — Shared JS
 
 // Nav: glass on scroll
 const nav = document.querySelector('.nav');

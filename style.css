@@ -364,3 +364,22 @@ p{line-height:1.7}
 .feat-tag-green{background:rgba(22,185,129,.1);color:var(--green)}
 .feat-tag-teal{background:rgba(15,163,163,.1);color:var(--teal)}
 .feat-tag-gold{background:rgba(224,137,43,.1);color:#E0892B}
+
+/* ── POLISH ──────────────────────────────────────────── */
+::selection{background:rgba(46,107,255,.9);color:#fff}
+body{text-rendering:optimizeLegibility}
+/* offset anchor jumps so targets clear the fixed nav */
+[id]{scroll-margin-top:88px}
+/* visible keyboard focus (accessibility) */
+:focus-visible{outline:2px solid var(--blue-l);outline-offset:3px;border-radius:6px}
+/* refined scrollbar — neutral so it works over both light and dark sections */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(124,134,148,.45);border-radius:99px}
+::-webkit-scrollbar-thumb:hover{background:rgba(124,134,148,.7)}
+/* respect users who prefer less motion */
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto}
+  .fade-up{opacity:1;transform:none;transition:none}
+  .phone-float,.chip-1,.chip-2,.chip-3,.orb,.badge-blue::before,.step-num::after{animation:none!important}
+}
